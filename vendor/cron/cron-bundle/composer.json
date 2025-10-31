@@ -1,0 +1,51 @@
+{
+    "name": "cron/cron-bundle",
+    "type": "symfony-bundle",
+    "description": "Symfony cron",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dries De Peuter",
+            "email": "dries@nousefreak.be"
+        }
+    ],
+    "require": {
+        "php": ">=8.1",
+        "ext-pcntl": "*",
+        "ext-posix": "*",
+        "cron/cron": "^1.0.1",
+        "doctrine/collections": "*",
+        "doctrine/dbal": "*",
+        "doctrine/orm": ">=2.4.5",
+        "doctrine/persistence": "*",
+        "symfony/config": "^5.0|^6.0|^7.0",
+        "symfony/console": "^5.0|^6.0|^7.0",
+        "symfony/dependency-injection": "^5.0|^6.0|^7.0",
+        "symfony/http-kernel": "^5.0|^6.0|^7.0",
+        "symfony/process": "^5.0|^6.0|^7.0"
+    },
+    "autoload": {
+        "psr-4" : {
+            "Cron\\CronBundle\\" : ""
+        },
+        "exclude-from-classmap": [
+            "/Tests/"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": { "Cron\\CronBundle\\Tests\\": "Tests/" }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "2.0-dev"
+        }
+    },
+    "require-dev": {
+        "doctrine/doctrine-bundle": "*",
+        "monolog/monolog": "*",
+        "phpunit/phpunit": "^10",
+        "symfony/security-csrf": "^5.0|^6.0|^7.0",
+        "symfony/translation": "^5.0|^6.0|^7.0",
+        "symfony/yaml": "^5.0|^6.0|^7.0"
+    }
+}

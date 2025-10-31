@@ -1,0 +1,8 @@
+services:
+  SalvatoreCapano\CronUiBundle\:
+    resource: '../../*'
+    exclude: '../../{DependencyInjection,Resources,Tests}'
+
+  SalvatoreCapano\CronUiBundle\Service\JobProvider:
+    arguments:
+      $jobEntityClass: '%cron_ui.job_entity_class%'

@@ -1,0 +1,3 @@
+cron_ui:
+  resource: '@CronUiBundle/Controller/CronJobController.php'
+  type: annotation

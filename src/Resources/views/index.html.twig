@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Cron Jobs</h1>
+
+    <table border="1" cellpadding="5" cellspacing="0">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Schedule</th>
+            <th>Enabled</th>
+            <th>Last Run</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for job in jobs %}
+            <tr>
+                <td>{{ job.id }}</td>
+                <td>{{ job.name }}</td>
+                <td>{{ job.schedule }}</td>
+                <td>{{ job.enabled ? '✅' : '❌' }}</td>
+                <td>{{ job.lastRun ? job.lastRun|date('Y-m-d H:i') : '-' }}</td>
+            </tr>
+        {% else %}
+            <tr><td colspan="5">No cron jobs found</td></tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
