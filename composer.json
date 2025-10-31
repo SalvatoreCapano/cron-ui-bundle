@@ -18,7 +18,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Salvatore\\CronUiBundle\\": "src/"
+            "SalvatoreCapano\\CronUiBundle\\": "src/"
         }
     },
     "extra": {
