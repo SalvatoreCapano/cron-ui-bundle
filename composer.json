@@ -1,5 +1,5 @@
 {
-    "name": "salvatore/cron-ui-bundle",
+    "name": "salvatorecapano/cron-ui-bundle",
     "description": "Symfony bundle providing a UI for managing CronBundle jobs.",
     "type": "symfony-bundle",
     "license": "MIT",
